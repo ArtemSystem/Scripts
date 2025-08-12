@@ -1,6 +1,6 @@
 local placeScripts = {
     [99567941238278] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", -- Ink Game
-    [12500925613167] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", -- Ink Game (Game)
+    [125009265613167] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", -- Ink Game (Game)
 }
 
 local currentPlaceId = game.PlaceId
