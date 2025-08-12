@@ -1,0 +1,46 @@
+local placeScripts = {
+    [2352342354123] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/inveris1337/dumping_nn/refs/heads/main/flohaxx/source.lua', true))()",
+}
+
+local currentPlaceId = game.PlaceId
+
+if placeScripts[currentPlaceId] then
+    loadstring(placeScripts[currentPlaceId])()
+else
+    local player = game.Players.LocalPlayer
+    local playerGui = player:WaitForChild("PlayerGui")
+
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "ErrorMenu"
+    screenGui.ResetOnSpawn = false
+    screenGui.Parent = playerGui
+
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Size = UDim2.new(0.5, 0, 0.15, 0)
+    textLabel.Position = UDim2.new(0.25, 0, 0.425, 0)
+    textLabel.BackgroundTransparency = 1
+    textLabel.TextColor3 = Color3.new(1, 0, 0)
+    textLabel.Font = Enum.Font.SourceSansBold
+    textLabel.TextScaled = true
+    textLabel.Text = "Ошибка: скрипт для этого плейса не найден"
+    textLabel.TextTransparency = 1
+    textLabel.Parent = screenGui
+
+    local function tweenTransparency(object, targetTransparency, duration)
+        local startTransparency = object.TextTransparency
+
+        local steps = 15
+        for i = 1, steps do
+            local alpha = i / steps
+            local newTransparency = startTransparency + (targetTransparency - startTransparency) * alpha
+            object.TextTransparency = newTransparency
+            wait(duration / steps)
+        end
+    end
+
+    tweenTransparency(textLabel, 0, 0.3)
+    wait(3)
+    tweenTransparency(textLabel, 1, 0.3)
+
+    screenGui:Destroy()
+end
