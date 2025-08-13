@@ -2,6 +2,7 @@ local placeScripts = {
     [99567941238278] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game%20Lobby', true))()", -- Ink Game
     [122816944483266] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game%20Lobby', true))()", -- Ink Game
     [125009265613167] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", -- Ink Game (Game)
+    [122816944483266] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", -- Ink Game (Game)
 }
 
 local currentPlaceId = game.PlaceId
