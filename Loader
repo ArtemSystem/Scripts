@@ -18,7 +18,7 @@ local function createGUI(messageText, buttonText, onClick)
 
     local Frame = Instance.new("Frame")
     Frame.Size = UDim2.new(0, 400, 0, 200)
-    Frame.Position = UDim2.new(0.5, -250, 0.55, -125)
+    Frame.Position = UDim2.new(0.5, -200, 0.55, -125)
     Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     Frame.Active = true
     Frame.Draggable = true
