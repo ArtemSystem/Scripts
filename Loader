@@ -1,10 +1,36 @@
 local RunService = game:GetService("RunService")
 
-local url = "https://raw.githubusercontent.com/ArtemSystem/lib/refs/heads/main/Banned?t="..tostring(tick())
-local bannedPlayers = loadstring(game:HttpGet(url))()
+local bannedPlayers = {
+    [0] = false, -- сюда можно вписывать UserId игроков для бана
+}
 
-local placeScriptsUrl = "https://raw.githubusercontent.com/ArtemSystem/lib/refs/heads/main/Place?t="..tostring(tick())
-local placeScripts = loadstring(game:HttpGet(placeScriptsUrl))()
+local placeScripts = {
+    [99567941238278] = {
+        Script = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game%20Lobby', true))()",
+        Name = "Ink Game",
+        Version = "1.0"
+    },
+    [125009265613167] = {
+        Script = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()",
+        Name = "Ink Game",
+        Version = "1.1"
+    },
+    [122816944483266] = {
+        Script = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()",
+        Name = "Ink Game",
+        Version = "1.1"
+    },
+    [96342491571673] = {
+        Script = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()",
+        Name = "Steal a Brainrot",
+        Version = "0.9"
+    },
+    [109983668079237] = {
+        Script = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()",
+        Name = "Steal a Brainrot",
+        Version = "0.9"
+    }
+}
 
 local player = game.Players.LocalPlayer
 
