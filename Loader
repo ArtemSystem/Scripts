@@ -17,18 +17,18 @@ local function createGUI(messageText, buttonText, onClick)
     ScreenGui.Parent = game.CoreGui
 
     local Frame = Instance.new("Frame")
-    Frame.Size = UDim2.new(0, 400, 0, 200)
+    Frame.Size = UDim2.new(0, 380, 0, 200)
     Frame.Position = UDim2.new(0.5, -200, 0.55, -125)
-    Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     Frame.Active = true
     Frame.Draggable = true
     Frame.Parent = ScreenGui
 
     local UICorner = Instance.new("UICorner")
-    UICorner.CornerRadius = UDim.new(0, 8)
+    UICorner.CornerRadius = UDim.new(0, 10)
     UICorner.Parent = Frame
 
-    local TitleBar = Instance.new("Frame")
+    --[[ local TitleBar = Instance.new("Frame")
     TitleBar.Size = UDim2.new(1, 0, 0, 35)
     TitleBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     TitleBar.Parent = Frame
@@ -40,37 +40,54 @@ local function createGUI(messageText, buttonText, onClick)
 
     local Title = Instance.new("TextLabel")
     Title.Size = UDim2.new(1, 0, 1, 0)
-    Title.Text = ""
+    Title.Text = "Scripts | by Sqw1zyyy"
     Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Title.Font = Enum.Font.SourceSansBold
+    Title.Font = Enum.Font.JosefinSans
     Title.TextSize = 22
     Title.BackgroundTransparency = 1
-    Title.Parent = TitleBar
+    Title.Parent = TitleBar ]]
 
     local Message = Instance.new("TextLabel")
     Message.Size = UDim2.new(1, -20, 0, 100)
-    Message.Position = UDim2.new(0, 10, 0.35, -40)
+    Message.Position = UDim2.new(0, 10, 0.35, -30)
     Message.TextColor3 = Color3.fromRGB(255, 255, 255)
     Message.BackgroundTransparency = 1
-    Message.TextSize = 36
-    Message.Font = Enum.Font.Bodoni
+    Message.TextSize = 24
+    Message.Font = Enum.Font.JosefinSans
     Message.TextWrapped = true
     Message.Text = messageText
     Message.Parent = Frame
 
     local Button = Instance.new("TextButton")
-    Button.Size = UDim2.new(0, 140, 0, 55)
-    Button.Position = UDim2.new(0.5, -70, 0.8, -27)
-    Button.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
+    Button.Size = UDim2.new(0, 150, 0, 40)
+    Button.Position = UDim2.new(0.5, -70, 0.8, -10)
+    Button.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     Button.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Button.TextSize = 40
-    Button.Font = Enum.Font.SourceSansBold
+    Button.TextSize = 15
+    Button.Font = Enum.Font.JosefinSans
     Button.Text = buttonText
     Button.Parent = Frame
+
+local ButtonStroke = Instance.new("UIStroke")
+ButtonStroke.Thickness = 1
+ButtonStroke.Color = Color3.fromRGB(70, 70, 70)
+ButtonStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+ButtonStroke.Parent = Button
 
     local ButtonCorner = Instance.new("UICorner")
     ButtonCorner.CornerRadius = UDim.new(0, 8)
     ButtonCorner.Parent = Button
+
+local normalColor = Color3.fromRGB(35, 35, 35)
+local hoverColor = Color3.fromRGB(60, 60, 60)
+
+Button.MouseEnter:Connect(function()
+    Button.BackgroundColor3 = hoverColor
+end)
+
+Button.MouseLeave:Connect(function()
+    Button.BackgroundColor3 = normalColor
+end)
 
     Button.MouseButton1Click:Connect(function()
         ScreenGui:Destroy()
@@ -88,7 +105,7 @@ end
 local scriptToLoad = placeScripts[game.PlaceId]
 
 if scriptToLoad then
-    createGUI("Script found!", "Load", function()
+    createGUI("Script found! Click load to run the script.", "Load", function()
         loadstring(scriptToLoad)()
     end)
 else
