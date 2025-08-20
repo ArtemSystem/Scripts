@@ -53,7 +53,7 @@ local function createGUI(messageText, buttonText, onClick)
     Message.TextColor3 = Color3.fromRGB(255, 255, 255)
     Message.BackgroundTransparency = 1
     Message.TextSize = 36
-    Message.Font = Enum.Font.SourceSans
+    Message.Font = Enum.Font.Bodoni
     Message.TextWrapped = true
     Message.Text = messageText
     Message.Parent = Frame
