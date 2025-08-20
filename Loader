@@ -1,50 +1,98 @@
-local placeScripts = {
-    [99567941238278] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game%20Lobby', true))()", -- Ink Game
-    [125009265613167] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", -- Ink Game (Game)
-    [122816944483266] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", -- Ink Game (Game)
-    [96342491571673] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()", -- Steal a Brainrot (noob server)
-    [109983668079237] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()" -- Steal a Brainrot (normal server)
+local bannedPlayers = {
+    [0] = false,
 }
 
-local currentPlaceId = game.PlaceId
+local placeScripts = {
+    [99567941238278] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game%20Lobby', true))()",
+    [125009265613167] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()",
+    [122816944483266] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()",
+    [96342491571673] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()",
+    [109983668079237] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()"
+}
 
-if placeScripts[currentPlaceId] then
-    loadstring(placeScripts[currentPlaceId])()
+local player = game.Players.LocalPlayer
+
+local function createGUI(messageText, buttonText, onClick)
+    local ScreenGui = Instance.new("ScreenGui")
+    ScreenGui.Parent = game.CoreGui
+
+    local Frame = Instance.new("Frame")
+    Frame.Size = UDim2.new(0, 400, 0, 200)
+    Frame.Position = UDim2.new(0.5, -250, 0.55, -125)
+    Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    Frame.Active = true
+    Frame.Draggable = true
+    Frame.Parent = ScreenGui
+
+    local UICorner = Instance.new("UICorner")
+    UICorner.CornerRadius = UDim.new(0, 8)
+    UICorner.Parent = Frame
+
+    local TitleBar = Instance.new("Frame")
+    TitleBar.Size = UDim2.new(1, 0, 0, 35)
+    TitleBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    TitleBar.Parent = Frame
+
+    local TitleBarCorner = Instance.new("UICorner")
+    TitleBarCorner.CornerRadius = UDim.new(0, 8)
+    TitleBarCorner.Parent = TitleBar
+    TitleBar.ClipsDescendants = true
+
+    local Title = Instance.new("TextLabel")
+    Title.Size = UDim2.new(1, 0, 1, 0)
+    Title.Text = ""
+    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Title.Font = Enum.Font.SourceSansBold
+    Title.TextSize = 22
+    Title.BackgroundTransparency = 1
+    Title.Parent = TitleBar
+
+    local Message = Instance.new("TextLabel")
+    Message.Size = UDim2.new(1, -20, 0, 100)
+    Message.Position = UDim2.new(0, 10, 0.35, -40)
+    Message.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Message.BackgroundTransparency = 1
+    Message.TextSize = 36
+    Message.Font = Enum.Font.SourceSans
+    Message.TextWrapped = true
+    Message.Text = messageText
+    Message.Parent = Frame
+
+    local Button = Instance.new("TextButton")
+    Button.Size = UDim2.new(0, 140, 0, 55)
+    Button.Position = UDim2.new(0.5, -70, 0.8, -27)
+    Button.BackgroundColor3 = Color3.fromRGB(0, 120, 255)
+    Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Button.TextSize = 40
+    Button.Font = Enum.Font.SourceSansBold
+    Button.Text = buttonText
+    Button.Parent = Frame
+
+    local ButtonCorner = Instance.new("UICorner")
+    ButtonCorner.CornerRadius = UDim.new(0, 8)
+    ButtonCorner.Parent = Button
+
+    Button.MouseButton1Click:Connect(function()
+        ScreenGui:Destroy()
+        if onClick then onClick() end
+    end)
+end
+
+if bannedPlayers[player.UserId] then
+    createGUI("You are banned in this script.", "OK", function()
+        script:Destroy()
+    end)
+    return
+end
+
+local scriptToLoad = placeScripts[game.PlaceId]
+
+if scriptToLoad then
+    createGUI("Script found!", "Load", function()
+        loadstring(scriptToLoad)()
+    end)
 else
-    local player = game.Players.LocalPlayer
-    local playerGui = player:WaitForChild("PlayerGui")
-
-    local screenGui = Instance.new("ScreenGui")
-    screenGui.Name = "ErrorMenu"
-    screenGui.ResetOnSpawn = false
-    screenGui.Parent = playerGui
-
-    local textLabel = Instance.new("TextLabel")
-    textLabel.Size = UDim2.new(0.5, 0, 0.15, 0)
-    textLabel.Position = UDim2.new(0.25, 0, 0.425, 0)
-    textLabel.BackgroundTransparency = 1
-    textLabel.TextColor3 = Color3.new(1, 0, 0)
-    textLabel.Font = Enum.Font.SourceSansBold
-    textLabel.TextScaled = true
-    textLabel.Text = "Ошибка: скрипт для этого плейса не найден"
-    textLabel.TextTransparency = 1
-    textLabel.Parent = screenGui
-
-    local function tweenTransparency(object, targetTransparency, duration)
-        local startTransparency = object.TextTransparency
-
-        local steps = 15
-        for i = 1, steps do
-            local alpha = i / steps
-            local newTransparency = startTransparency + (targetTransparency - startTransparency) * alpha
-            object.TextTransparency = newTransparency
-            wait(duration / steps)
-        end
-    end
-
-    tweenTransparency(textLabel, 0, 0.3)
-    wait(3)
-    tweenTransparency(textLabel, 1, 0.3)
-
-    screenGui:Destroy()
+    createGUI("The script is not intended for this game.", "OK", function()
+        script:Destroy()
+    end)
 end
