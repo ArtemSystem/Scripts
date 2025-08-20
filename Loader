@@ -2,7 +2,7 @@ local placeScripts = {
     [99567941238278] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game%20Lobby', true))()", -- Ink Game
     [125009265613167] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", -- Ink Game (Game)
     [122816944483266] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", -- Ink Game (Game)
-    [96342491571673] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()" -- Steal a Brainrot (noob server)
+    [96342491571673] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()", -- Steal a Brainrot (noob server)
     [109983668079237] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()" -- Steal a Brainrot (normal server)
 }
 
