@@ -105,7 +105,7 @@ end
 local scriptToLoad = placeScripts[game.PlaceId]
 
 if scriptToLoad then
-    createGUI("Script found! Click load to run the script.", "Load", function()
+    createGUI("Script found!", "Load", function()
         loadstring(scriptToLoad)()
     end)
 else
