@@ -1,0 +1,185 @@
+if getgenv().Sqw1zyyyLoaderStarted then return end
+getgenv().Sqw1zyyyLoaderStarted = true
+
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local placeScripts = {
+    [99567941238278] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game%20Lobby', true))()", Name="Ink Game", Version="0.1", Update=false},
+    [125009265613167] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", Name="Ink Game", Version="0.1", Update=false},
+    [122816944483266] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Ink%20Game', true))()", Name="Ink Game", Version="0.1", Update=false},
+    [96342491571673] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()", Name="Steal a Brainrot", Version="0.1", Update=false},
+    [109983668079237] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Steal%20a%20Brainrot', true))()", Name="Steal a Brainrot", Version="0.1", Update=false},
+    [8482713490] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Lobby', true))()", Name="Forgotten Memories", Version="0.1", Update=false},
+    [12492927866] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Maze', true))()", Name="Forgotten Memories", Version="0.1", Update=false},
+    [12492936101] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Maze', true))()", Name="Forgotten Memories", Version="0.1", Update=false},
+    [8715369268] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1", Update=false}, -- 1
+    [10881589836] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1", Update=false}, -- 2
+    [10892988249] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1", Update=false}, -- 3
+    [10929677330] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1", Update=false}, -- 4
+    [11138144016] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1", Update=false} -- 5
+
+}
+
+local ScreenGui = Instance.new("ScreenGui", game:GetService("CoreGui"))
+
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.new(0, 300, 0, 120)
+Frame.Position = UDim2.new(0.5, -150, 0.5, -90)
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.ClipsDescendants = true
+Frame.Parent = ScreenGui
+
+local UICorner = Instance.new("UICorner", Frame)
+UICorner.CornerRadius = UDim.new(0, 12)
+
+local function tweenResize(frame, newWidth, newHeight, duration)
+    local centerX = frame.AbsolutePosition.X + frame.AbsoluteSize.X/2
+    local centerY = frame.AbsolutePosition.Y + frame.AbsoluteSize.Y/2
+    TweenService:Create(frame, TweenInfo.new(duration, Enum.EasingStyle.Quad), {
+        Size = UDim2.new(0, newWidth, 0, newHeight),
+        Position = UDim2.new(0, centerX - newWidth/2, 0, centerY - newHeight/2)
+    }):Play()
+end
+
+local Title = Instance.new("TextLabel", Frame)
+Title.Size = UDim2.new(1, -20, 0, 60)
+Title.Position = UDim2.new(0, 10, 0.5, -30)
+Title.BackgroundTransparency = 1
+Title.Font = Enum.Font.JosefinSans
+Title.TextSize = 28
+Title.Text = "Sqw1zyyy Present"
+Title.TextColor3 = Color3.fromRGB(255,255,255)
+
+local gradient = Instance.new("UIGradient", Title)
+gradient.Enabled = true
+gradient.Rotation = 0
+
+local colors = {Color3.fromRGB(255,215,0), Color3.fromRGB(0,0,0)}
+local t = 0
+local speed = 1.2
+
+RunService.RenderStepped:Connect(function(dt)
+    t = t + dt * speed
+    local newColors = {}
+    for i = 1, #colors do
+        local index = ((i - 1 - t) % #colors) + 1
+        local low = math.floor(index)
+        local high = (low % #colors) + 1
+        local frac = index - low
+        local color = colors[low]:Lerp(colors[high], frac)
+        table.insert(newColors, color)
+    end
+    gradient.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, newColors[1]),
+        ColorSequenceKeypoint.new(1, newColors[2])
+    }
+end)
+
+task.wait(2)
+tweenResize(Frame, 50, 0, 0.6)
+TweenService:Create(Title, TweenInfo.new(1), {TextTransparency = 1}):Play()
+task.wait(1)
+Title:Destroy()
+
+local function showUpdateMessage()
+    local updateLabel = Instance.new("TextLabel", Frame)
+    updateLabel.Size = UDim2.new(1, -20, 0, 50)
+    updateLabel.Position = UDim2.new(0, 10, 0, 15)
+    updateLabel.BackgroundTransparency = 1
+    updateLabel.Text = "Script on update"
+    updateLabel.Font = Enum.Font.SciFi
+    updateLabel.TextSize = 45
+    updateLabel.TextColor3 = Color3.fromRGB(255,255,255)
+    updateLabel.TextWrapped = true
+
+    local gradient = Instance.new("UIGradient", updateLabel)
+    gradient.Enabled = true
+    gradient.Rotation = 0
+    local colors = {Color3.fromRGB(0,100,255), Color3.fromRGB(0,0,0)}
+    local t = 0
+    local speed = 1.0
+
+    local conn
+    conn = RunService.RenderStepped:Connect(function(dt)
+        t = t + dt * speed
+        local newColors = {}
+        for i = 1, #colors do
+            local index = ((i - 1 - t) % #colors) + 1
+            local low = math.floor(index)
+            local high = (low % #colors) + 1
+            local frac = index - low
+            local color = colors[low]:Lerp(colors[high], frac)
+            table.insert(newColors, color)
+        end
+        gradient.Color = ColorSequence.new{
+            ColorSequenceKeypoint.new(0, newColors[1]),
+            ColorSequenceKeypoint.new(1, newColors[2])
+        }
+    end)
+
+    task.wait(3)
+    TweenService:Create(updateLabel, TweenInfo.new(1), {TextTransparency=1}):Play()
+    task.wait(1)
+    updateLabel:Destroy()
+    conn:Disconnect()
+end
+
+local function showMessages(msgs)
+    local labels = {}
+    for i, m in ipairs(msgs) do
+        local lbl = Instance.new("TextLabel", Frame)
+        lbl.Size = m.SizeUDim2 or UDim2.new(1,-20,0,50)
+        lbl.Position = m.Position or UDim2.new(0,10,0.2 + (i-1)*0.25,0)
+        lbl.BackgroundTransparency = 1
+        lbl.Text = m.Text
+        lbl.Font = m.Font or Enum.Font.JosefinSans
+        lbl.TextSize = m.Size or 22
+        lbl.TextColor3 = m.Color or Color3.fromRGB(255,255,255)
+        lbl.TextWrapped = true
+        table.insert(labels, lbl)
+    end
+    task.wait(3)
+    for _, lbl in ipairs(labels) do
+        TweenService:Create(lbl, TweenInfo.new(1), {TextTransparency = 1}):Play()
+    end
+    task.wait(1)
+    for _, lbl in ipairs(labels) do
+        lbl:Destroy()
+    end
+end
+
+local gameInfo = placeScripts[game.PlaceId]
+
+if gameInfo then
+    tweenResize(Frame, 420, 150, 0.6)
+
+    if gameInfo.Update then
+        tweenResize(Frame, 400, 80, 0.6)
+        showUpdateMessage()
+        tweenResize(Frame, 400, 0, 1)
+        task.wait(1)
+        ScreenGui:Destroy()
+        return
+    end
+
+    showMessages({
+        {Text="Game: "..gameInfo.Name, Size=28, Color=Color3.fromRGB(255,255,255), Font=Enum.Font.JosefinSans, Position=UDim2.new(0,10,0,20), SizeUDim2=UDim2.new(1,-20,0,80)},
+        {Text="Version: "..gameInfo.Version, Size=20, Color=Color3.fromRGB(130,130,130), Font=Enum.Font.Cartoon, Position=UDim2.new(0,10,0,90), SizeUDim2=UDim2.new(1,-20,0,30)}
+    })
+
+    tweenResize(Frame, 100, 0, 1)
+    task.wait(1)
+    ScreenGui:Destroy()
+    loadstring(gameInfo.Script)()
+else
+    tweenResize(Frame, 500, 120, 1)
+    showMessages({
+        {Text="The script is not intended for this game.", Size=50, Color=Color3.fromRGB(200,200,200), Font=Enum.Font.SciFi, Position=UDim2.new(0,10,0,10), SizeUDim2=UDim2.new(0,480,0,100)}
+    })
+    tweenResize(Frame, 100, 0, 1)
+    task.wait(1)
+    ScreenGui:Destroy()
+end
