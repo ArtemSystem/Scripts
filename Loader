@@ -19,7 +19,7 @@ local placeScripts = {
     [10881589836] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1 (BETA)", Update=false}, -- 2
     [10892988249] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1 (BETA)", Update=false}, -- 3
     [10929677330] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1 (BETA)", Update=false}, -- 4
-    [11138144016] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1 (BETA)", Update=false} -- 5
+    [11138144016] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1 (BETA)", Update=false}, -- 5
     [3240343305] = {Script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ArtemSystem/Scripts/refs/heads/main/Forgotten%20Memories%20Story', true))()", Name="Forgotten Memories", Version="0.1 (BETA)", Update=false} -- 6
 }
 
