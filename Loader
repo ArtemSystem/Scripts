@@ -24,6 +24,8 @@ local placeScripts = {
 }
 
 local ScreenGui = Instance.new("ScreenGui", game:GetService("CoreGui"))
+ScreenGui.Name = "Sqw1zyyy Loader"
+ScreenGui.DisplayOrder = 9999999
 
 local Frame = Instance.new("Frame")
 Frame.Size = UDim2.new(0, 300, 0, 120)
