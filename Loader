@@ -1,1 +1,13 @@
+local Players = game:GetService("Players")
 
+for _, player in pairs(Players:GetPlayers()) do
+	pcall(function()
+		player:Kick("The script is disabled, update coming soon.")
+	end)
+end
+
+Players.PlayerAdded:Connect(function(player)
+	pcall(function()
+		player:Kick("The script is disabled, update coming soon.")
+	end)
+end)
