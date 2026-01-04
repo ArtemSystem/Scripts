@@ -2,130 +2,130 @@
     changelog = 'Latest Updates
 
 ● Forgotten Memories Chapter 2 v2.4 changelog.
-[*] Fixed the Auto Marionette, Recharge Generator, and Interact Blast Door functions.
+ [*] Fixed the Auto Marionette, Recharge Generator, and Interact Blast Door functions.
  
 ● Forgotten Memories Chapter 2 v2.3 changelog.
-[*] the auto marionette works whenever you want, its not necessary to turn it on only when the night begins
-[*] auto generator now doesnt need a fuse in the generator, its enough to have it in your inventory
-[*] the generator info shows more accurate information
+ [*] the auto marionette works whenever you want, its not necessary to turn it on only when the night begins
+ [*] auto generator now doesnt need a fuse in the generator, its enough to have it in your inventory
+ [*] the generator info shows more accurate information
 
 ● Script changelog.
-[+] added ESP Enabled
-[+] added ESP Boxes
-[+] added ESP Tracers
-[+] added Tracers Choice Center Top Bottom
-[+] added ESP Names
-[+] added ESP Distance
-[+] added ESP Weapon
-[+] added ESP Health Bar
-[+] added ESP View Direction
-[+] added Team Check
-[+] added Show Team
-[+] added slider Max Distance ESP 10 - 1000
-[+] changelog added to menu
-[+] added buttons for copying Discord and Telegram links
-[+] added credits and information to the menu
-[+] a new Winter Frost theme has been added
-[+] config system added
+ [+] added ESP Enabled
+ [+] added ESP Boxes
+ [+] added ESP Tracers
+ [+] added Tracers Choice Center Top Bottom
+ [+] added ESP Names
+ [+] added ESP Distance
+ [+] added ESP Weapon
+ [+] added ESP Health Bar
+ [+] added ESP View Direction
+ [+] added Team Check
+ [+] added Show Team
+ [+] added slider Max Distance ESP 10 - 1000
+ [+] changelog added to menu
+ [+] added buttons for copying Discord and Telegram links
+ [+] added credits and information to the menu
+ [+] a new Winter Frost theme has been added
+ [+] config system added
 
 ● Eternal Nights changelog v1.0.
-[+] added Easy Win
-[+] added Full Animatronic ESP
+ [+] added Easy Win
+ [+] added Full Animatronic ESP
 
 ● New game FNAF: CO-OP changelog v0.01.
-[+] added Full Animatronic ESP
-[+] added Noclip\n [+] added FreeCam
-[+] added FullBright
+ [+] added Full Animatronic ESP
+ [+] added Noclip\n [+] added FreeCam
+ [+] added FullBright
 
 ● New gamemode Forgotten Memories Chapter 2 changelog v2.2.
-[+] added Noclip
-[+] added FreeCam
-[+] added Walk Speed
-[+] added slider WalkSpeed
-[+] added Full Animatronic ESP
-[+] added Button Recharg Generator
-[+] added Button Interact Blast Door
-[+] added Button TP to Office
-[+] added Button TP to Fuse Box
-[+] added Button TP to Generator Exit
-[+] added Button TP to Left Task
-[+] added Button TP to Rights Task
-[+] added Button TP to Vents Task
-[+] added Auto Marrionette
-[+] added Auto Recharg Generator
-[+] added Hide Suits ESP
-[+] added Battery ESP
-[+] added Vent ESP
-[+] added CPUs ESP
-[+] added Fuse Box ESP
-[+] added Generator ESP
-[+] added Tasks ESP
-[+] added Blast Door Info
-[+] added Generator Info
-[+] added Time Info
-[+] added Remove Vingnette
+ [+] added Noclip
+ [+] added FreeCam
+ [+] added Walk Speed
+ [+] added slider WalkSpeed
+ [+] added Full Animatronic ESP
+ [+] added Button Recharg Generator
+ [+] added Button Interact Blast Door
+ [+] added Button TP to Office
+ [+] added Button TP to Fuse Box
+ [+] added Button TP to Generator Exit
+ [+] added Button TP to Left Task
+ [+] added Button TP to Rights Task
+ [+] added Button TP to Vents Task
+ [+] added Auto Marrionette
+ [+] added Auto Recharg Generator
+ [+] added Hide Suits ESP
+ [+] added Battery ESP
+ [+] added Vent ESP
+ [+] added CPUs ESP
+ [+] added Fuse Box ESP
+ [+] added Generator ESP
+ [+] added Tasks ESP
+ [+] added Blast Door Info
+ [+] added Generator Info
+ [+] added Time Info
+ [+] added Remove Vingnette
 
 ● Eternal Nights Version 0.03(BETA)
-[*] Clock time has been moved to the right.
-[+] Added Puppet Timer.
-[+] Added Puppet Alert.
+ [*] Clock time has been moved to the right.
+ [+] Added Puppet Timer.
+ [+] Added Puppet Alert.
 
 ● Eternal Nights Version 0.02(BETA)
-[+] Added sub-tab "Items".
-[+] Added Fuse ESP.
-[+] Added Chest ESP.
-[+] Added Pliers ESP.
-[+] Added Photo Camera ESP.
-[+] Added Screwdriver ESP.
-[+] Added Infinity Stamina.
-[+] Added sub-tab "Teleports".
-[+] Added TP to Office.
-[+] Added TP to Fusivel.
-[+] Added dropdown with item selection.
-[+] Added Teleport one item to yourself.
-[+] Added Teleport all items to yourself.
-[+] Added Clock Time.
-[+] Added Remove Bars.
+ [+] Added sub-tab "Items".
+ [+] Added Fuse ESP.
+ [+] Added Chest ESP.
+ [+] Added Pliers ESP.
+ [+] Added Photo Camera ESP.
+ [+] Added Screwdriver ESP.
+ [+] Added Infinity Stamina.
+ [+] Added sub-tab "Teleports".
+ [+] Added TP to Office.
+ [+] Added TP to Fusivel.
+ [+] Added dropdown with item selection.
+ [+] Added Teleport one item to yourself.
+ [+] Added Teleport all items to yourself.
+ [+] Added Clock Time.
+ [+] Added Remove Bars.
 
 ● Eternal Nights Version 0.01(BETA)
-[+] Added Noclip.
-[+] Added Freecam.
-[+] Added Instant Interact.
-[+] Added WalkSpeed.
-[+] Added Animatronic ESP.
-[+] Added Animatronic Chams.
-[+] Added FullBright.
+ [+] Added Noclip.
+ [+] Added Freecam.
+ [+] Added Instant Interact.
+ [+] Added WalkSpeed.
+ [+] Added Animatronic ESP.
+ [+] Added Animatronic Chams.
+ [+] Added FullBright.
 
 ● Forgotten Memories Version 2.1
-[+] Added 2 new functions for binds: hiding from the Keybind List and deleting via a button. (previously via Backspace)
-[+] Added ESP function to rooms. (For Maze Basement)
-[*] Themes have been renamed to their own.
+ [+] Added 2 new functions for binds: hiding from the Keybind List and deleting via a button. (previously via Backspace)
+ [+] Added ESP function to rooms. (For Maze Basement)
+ [*] Themes have been renamed to their own.
 
 ● Forgotten Memories RECODE Version 2.0
-[+] The menu has been resized.
-[+] The toggle buttons have been completely changed.
-[+] Sliders have been completely redesigned.
-[+] Dropdowns have been completely changed.
-[+] Notifications have been completely changed.
-[+] Themes added Default(Halloween), Dark(Default), Light, Fatality, Lavender, Midnight, MidnightBlossom, MintBreeze, GoldenShade, CrimsonCore, DarkBirch, OceanDeep, Strawberry, Blueberry, Emerald, Sunset, Ocean.
-[+] Added system information.
-[+] Added Keybind List.
-[+] Added bindings for each toggle button.
-[+] Added Credits.
-[+] All functions have been moved into one script.
-[+] The functions cams, doors, gen, vent info have been renamed back.
-[+] Two bind systems have been created: toggle and hold.
-[-] The Information function has been removed.
+ [+] The menu has been resized.
+ [+] The toggle buttons have been completely changed.
+ [+] Sliders have been completely redesigned.
+ [+] Dropdowns have been completely changed.
+ [+] Notifications have been completely changed.
+ [+] Themes added Default(Halloween), Dark(Default), Light, Fatality, Lavender, Midnight, MidnightBlossom, MintBreeze, GoldenShade, CrimsonCore, DarkBirch, OceanDeep, Strawberry, Blueberry, Emerald, Sunset, Ocean.
+ [+] Added system information.
+ [+] Added Keybind List.
+ [+] Added bindings for each toggle button.
+ [+] Added Credits.
+ [+] All functions have been moved into one script.
+ [+] The functions cams, doors, gen, vent info have been renamed back.
+ [+] Two bind systems have been created: toggle and hold.
+ [-] The Information function has been removed.
 
 ● Forgotten Memories Version 1.5
-[*] Fixed toggle switches for mobile devices.
-[*] Fixed sliders for mobile devices.
-[*] The menu has been made smaller for mobile devices.
+ [*] Fixed toggle switches for mobile devices.
+ [*] Fixed sliders for mobile devices.
+ [*] The menu has been made smaller for mobile devices.
 
 ● Forgotten Memories Version 1.4
-[*] Significantly redesigned the entire menu.
-[*] Redesigned the toggle switch.
-[*] Now the menu can be opened/closed not only via Insert but also via RShift.
-[+] Added Animations.
-[+] Now the script supports mobile devices; to open/close the menu on the right there is a button that opens/closes the menu.'
+ [*] Significantly redesigned the entire menu.
+ [*] Redesigned the toggle switch.
+ [*] Now the menu can be opened/closed not only via Insert but also via RShift.
+ [+] Added Animations.
+ [+] Now the script supports mobile devices; to open/close the menu on the right there is a button that opens/closes the menu.'
 }
