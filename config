@@ -1,6 +1,25 @@
 [+] Lib {
     changelog = 'Latest Updates
 
+● UPDATE PART 1 Changelog throughout the script
+
+ [*] replaced the names of the themes with our own ones
+ [+] added a button that saves your theme and runs the script with this theme the next time
+ [*] changed the key verification system to a new one⁩
+
+● Forgotten Memories Chapter 2 v2.5 changelog.
+
+ [*] fixed all ESP for the second part of the second chapter, namely ruin animatronics
+ [+] added Easy Win function
+ [+] added Auto Skip Cutscene function
+ [+] added function Auto Open Vents
+ [+] added Task Checker function with Interact and Notify settings
+ [+] added Fuse Box Info function
+ [+] added Active Task ESP function 
+ [+] added buttons for interaction with Generator, Fuse Box, Left Task, Right Task, Vents Task
+ [+] added teleportation buttons Exit No. 1, Exit No. 2 (for 3 nights), Safe, Left Task, Right Task, Vents Task and for the second part of the second chapter of Office FNAF 1, Power Lever, Left Stabilizer, Right Stabilizer
+ [+] added a system that does not allow interaction with something if the generator is currently being interacted with or repaired
+⁩
 ● Forgotten Memories Chapter 2 v2.4 changelog.
  [*] Fixed the Auto Marionette, Recharge Generator, and Interact Blast Door functions.
  
