@@ -1,6 +1,100 @@
 [+] Lib {
     changelog = 'Latest Updates
 
+● UPDATE 15
+Forgotten Memories update v2.7
+ + The "Unlock Jump" feature has been added.
+ + The "INF Jump" feature has been added.
+ + The "Third Person" feature has been added.
+ + The "Third Person Distance" slider has been added.
+ + The "Set Custom FOV" feature has been added.
+ + The "Custom FOV" slider has been added.
+
+● UPDATE 14 PART 2
+Loader/Key System update
+ + A new provider, "LootLabs", has been added.
+Forgotten Memories update v2.6
+ + Added the "Invincible From Void" feature, which prevents you from dying if you fall off the map in 1- nights of Chapter 2.
+ + Added divisions between nights 1-3 and nights 4-5 in Chapter 2.
+ + Added a "Complete Task" button. When you complete any task using this button, it is automatically completed. (for nights 1-3 in Chapter 2)
+ + Added "Left Door" button. (for nights 4-5 in Chapter 2)
+ + Added "Right Door" button. (for nights 4-5 in Chapter 2)
+ + Added "Power Lever" button. (for nights 4-5 in Chapter 2)
+ + Teleporter buttons such as "Office FNAF1", "Power Lever", "Left Stabilizer" and "Right Stabilizer" have been renamed to shorter versions.
+ + New sub-tabs have been added called "Left Stabilizer" and "Right Stabilizer".
+ + New buttons "Full Stabilize Left" and "Full Stabilize Right" have been added, which stabilize the Stabilizer by 100 percent.
+ + New sliders "Override value L." and "Override value R." have been added.
+ + New buttons "Override Stabilize Left" and "Override Stabilize Right" have been added, which stabilize the stabilizer as much as specified in the Override value.
+ + New functions "Freeze L. value" and "Freeze R. value" have been added, which freeze the current value of the stabilizer.
+ + A new "Stab ESP" function has been added.
+ + The "Mark Blur Disabled" feature has been added.
+ + The "ESP Transparency" slider has been added.
+ - The "System Info" function has been removed.
+Bite By Night (new game) v0.01
+ + The "Main" tab was added.
+ + The "Visuals" tab was added.
+ + The "Menu" tab was added.
+ + The "Player" sub-tab has been added.
+ + The "Noclip" function has been added.
+ + The "FreeCam" function has been added.
+ + The "Instant Interact" function has been added.
+ + The "Unlock Jump" function has been added.
+ + The "WalkSpeed" function has been added.
+ + The slider "WalkSpeed" has been added.
+ + The "RunSpeed" function has been added.
+ + The slider "RunSpeed" has been added.
+ + The "Auto" sub-tab has been added.
+ + The "Auto Block Door" function has been added.
+ + The "ESP" sub-tab has been added.
+ + The "ESP Enabled" function has been added.
+ + The "ESP Boxes" function has been added.
+ + The "ESP Tracers" function has been added.
+ + The "ESP Boxes" function has been added.
+ + A dropdown "Tracer Position" with settings "Bottom", "Top", "Center" was added.
+ + The "ESP Names" function has been added.
+ + The "ESP Distance" function has been added.
+ + The "ESP Health Bar" function has been added.
+ + The "ESP Health Text" function has been added.
+ + The "ESP Stamina Bar" function has been added.
+ + The "ESP Stamina Text" function has been added.
+ + The "ESP View Direction" function has been added.
+ + A dropdown "ESP Flags" with settings "Character", "Stun" was added.
+ + The slider "Max Distance ESP" has been added
+ + The "Animatronic" sub-tab has been added.
+ + The "A. ESP Enabled" function has been added.
+ + The "A. ESP Boxes" function has been added.
+ + The "A. ESP Tracers" function has been added.
+ + The "A. ESP Boxes" function has been added.
+ + A dropdown "A. Tracer Position" with settings "Bottom", "Top", "Center" was added.
+ + The "A. ESP Names" function has been added.
+ + The "A. ESP Distance" function has been added.
+ + The "A. ESP Health Bar" function has been added.
+ + The "A. ESP Health Text" function has been added.
+ + The "A. ESP Stamina Bar" function has been added.
+ + The "A. ESP Stamina Text" function has been added.
+ + The "A. ESP View Direction" function has been added.
+ + A dropdown "A. ESP Flags" with settings "Character", "Stun" was added.
+ + The slider "Max Distance A. ESP" has been added.
+ + The "Chams" function has been added.
+ + The "ESP Enabled(old)" function has been added.
+ + The "Items" sub-tab has been added.
+ + The "Battery ESP" function has been added.
+ + The "Generators ESP" function has been added.
+ + The "Fuse Box ESP" function has been added.
+ + The "Traps ESP" function has been added.
+ + The "Axe ESP" function has been added.
+ + The "Minions ESP" function has been added.
+ + The "World" sub-tab has been added.
+ + The "FullBright" function has been added.
+ + The "Main" sub-tab has been added.
+ + The "Mark Blur Disabled" feature has been added.
+ + The "ESP Transparency" slider has been added.
+ + The keybind menu was added.
+ + Themes have been added.
+ + The "Set theme as default" button was added.
+ + The "Configs" sub-tab has been added.
+ + A config system has been added.
+
 ● UPDATE PART 1 Changelog throughout the script
  [*] replaced the names of the themes with our own ones
  [+] added a button that saves your theme and runs the script with this theme the next time
